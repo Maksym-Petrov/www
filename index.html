@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Технологии</title>
+    <link rel="stylesheet" href="C:\Users\lucky\Desktop\www\main.css">
+</head>
+<body>
+ <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>IT Технологии</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" onclick="slowScroll('#overiwe')"title="Преимущества">Преимущества</a>
+            <a href="#" onclick="slowScroll('#technology')"title="Технологии"> Технологии</a>
+            <a href="#" onclick="slowScroll('#programming')"title="Программирование"> Программирование</a>
+        </div>
+        
+    </header>
+    <div id="top">
+        <h1>Невероятный мир</h1>
+        <h3>Технологий!</h3>
+    </div>
+    <div id="main">
+        <div class="intro">
+            <h2>Основные черты современных ИТ</h2>
+            <span>Информационные технологии охватывают все ресурсы, 
+                необходимые для управления информацией, 
+                особенно компьютеры, программное обеспечение и сети,
+                 необходимые для создания, хранения, управления, передачи и поиска информации. 
+                 Информационные технологии могут быть сгруппированы следующим образом.</span>
+        </div>
+        <div class="intro">
+            <span>
+                
+                 Коммуникационные средства;<br>
+                 Организационно-методическое обеспечение;<br>
+                 Технические средства;<br>
+                 Стандартизация.</span>
+        </div>
+    </div>
+    <div id="overview">
+        <h2>Программирование</h2>
+        <h4>Языки программирования</h4>
+    <div class="img">
+        <img src="https://www.jrebel.com/sites/rebel/files/image/2020-05/image-blog-revel-top-java-tools.jpg" alt="">
+        <span>Изучайте язык программирования Java</span>
+    </div><div class="img">
+        <img src="https://us.123rf.com/450wm/dtosh/dtosh1905/dtosh190500017/121934864-python-coding-language-sign-on-computer-monitor-device-programming-developing-concept-abstract-digit.jpg?ver=6" alt="">
+        <span>Стань разработчиком Python </span>
+    </div><div class="img">
+        <img src="https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15687/comprehensive-guide-javascript-design-patterns-cf0c7c0e69d51d97044a8431da9175e3.png" alt="">
+        <span>Изучи  JavaScript</span>
+    </div><div class="img">
+        <img src="https://miro.medium.com/max/2560/1*qaJmmNjNDHrpCDwlIUyqxg.jpeg" alt="">
+        <span>Зацени возможности  C++</span>
+    </div>
+    </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+         function slowScroll (id) {
+             $('html, body').animate({
+             scrollTop: $(id).offset().top
+             },500);
+         }
+         $(document).on("scroll", function(){
+             if($(window).scrollTop()===0)
+             $("header").removeClass("fixed");
+             else
+             $("header").attr("class", "fixed");
+         });
+     </script>
+</body>
+</html>
